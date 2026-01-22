@@ -8,6 +8,7 @@ import { db } from "./firebase-config";
 function App() {
   const [count, setCount] = useState(0);
   const addToCollection = async () => {
+    setCount(count + 1)
     try {
       const docRef = await addDoc(collection(db, "response"), {
         answer: "testfromweb2",
